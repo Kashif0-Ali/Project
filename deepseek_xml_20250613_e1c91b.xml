@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todoproject.controller.MainController">
+    <top>
+        <ToolBar>
+            <Button text="Add Task" onAction="#handleAddTask"/>
+            <Button text="Edit Task" onAction="#handleEditTask"/>
+            <Button text="Delete Task" onAction="#handleDeleteTask"/>
+            <Button text="Mark Complete" onAction="#handleMarkComplete"/>
+            <Separator orientation="VERTICAL"/>
+            <Button text="Add Category" onAction="#handleAddCategory"/>
+            <Separator orientation="VERTICAL"/>
+            <Button text="Clear Filters" onAction="#handleClearFilters"/>
+        </ToolBar>
+    </top>
+    
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Label text="FILTERS" font="${new Font('System Bold', 12)}"/>
+            
+            <Label text="Category:"/>
+            <ComboBox fx:id="categoryFilterComboBox"/>
+            
+            <Label text="Priority:"/>
+            <ComboBox fx:id="priorityFilterComboBox"/>
+            
+            <Label text="Due Date:"/>
+            <DatePicker fx:id="dueDateFilterDatePicker"/>
+            
+            <CheckBox fx:id="showCompletedCheckBox" text="Show Completed"/>
+            
+            <Label text="Search:"/>
+            <TextField fx:id="searchField"/>
+        </VBox>
+    </left>
+    
+    <center>
+        <TableView fx:id="taskTable">
+            <columns>
+                <TableColumn text="Title" fx:id="titleColumn" prefWidth="150"/>
+                <TableColumn text="Description" fx:id="descriptionColumn" prefWidth="250"/>
+                <TableColumn text="Due Date" fx:id="dueDateColumn" prefWidth="100"/>
+                <TableColumn text="Priority" fx:id="priorityColumn" prefWidth="80"/>
+                <TableColumn text="Category" fx:id="categoryColumn" prefWidth="100"/>
+                <TableColumn text="Completed" fx:id="completedColumn" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

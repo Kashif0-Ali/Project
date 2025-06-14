@@ -1,0 +1,78 @@
+/* Base style */
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-base: #ecf0f1;
+}
+
+/* Table style */
+.table-view {
+    -fx-background-color: white;
+}
+
+.table-row-cell:completed {
+    -fx-background-color: #e8f8f5;
+}
+
+.table-row-cell:overdue {
+    -fx-background-color: #fadbd8;
+}
+
+.table-row-cell:high-priority {
+    -fx-text-fill: #e74c3c;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:medium-priority {
+    -fx-text-fill: #f39c12;
+}
+
+/* Category colors - these would be dynamically added based on actual category colors */
+.category-work {
+    -fx-text-fill: #FF5733;
+    -fx-font-weight: bold;
+}
+
+.category-personal {
+    -fx-text-fill: #33FF57;
+    -fx-font-weight: bold;
+}
+
+.category-study {
+    -fx-text-fill: #3357FF;
+    -fx-font-weight: bold;
+}
+
+.category-health {
+    -fx-text-fill: #F033FF;
+    -fx-font-weight: bold;
+}
+
+/* Button styles */
+.button {
+    -fx-background-radius: 5;
+    -fx-padding: 5 10 5 10;
+}
+
+/* Toolbar style */
+.tool-bar {
+    -fx-background-color: #3498db;
+    -fx-padding: 5;
+}
+
+.tool-bar .button {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+}
+
+.tool-bar .button:hover {
+    -fx-background-color: #1abc9c;
+}
+
+/* Filter panel style */
+.vbox {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 1 0 0;
+}
